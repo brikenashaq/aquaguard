@@ -281,19 +281,13 @@ python3 -c "from ultralytics import YOLO; YOLO('best.pt').export(format='onnx')"
 **Brikena Shaqiri**
 - 3rd year Computer Science (Software Engineering)
 - South East European University, Tetovo, North Macedonia
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@yourusername](https://github.com/brikenashaq)
 
 ---
 
 ## 🏫 Academic Context
 
 This project was developed as part of the **IoT (CCE-802)** course at South East European University. It demonstrates the integration of edge AI, IoT sensor networks, cloud computing, and voice interfaces into a complete smart monitoring system.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
