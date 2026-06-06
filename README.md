@@ -14,9 +14,9 @@
 
 ## 🎬 Demo
 
-[![AquaGuard Demo Video](screenshots/thumbnail.png)](https://www.youtube.com/watch?v=dEEe8Ku3BBs)
+[![AquaGuard Demo Video]](https://www.youtube.com/watch?v=dEEe8Ku3BBs)
 
-> Click the image above to watch the full demo video
+> Click the link
 
 ---
 
