@@ -281,7 +281,7 @@ python3 -c "from ultralytics import YOLO; YOLO('best.pt').export(format='onnx')"
 **Brikena Shaqiri**
 - 3rd year Computer Science (Software Engineering)
 - South East European University, Tetovo, North Macedonia
-- GitHub: [@yourusername](https://github.com/brikenashaq)
+- GitHub: [brikenashaq](https://github.com/brikenashaq)
 
 ---
 
