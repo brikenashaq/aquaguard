@@ -1,6 +1,6 @@
-#define BLYNK_TEMPLATE_ID "TMPL4G27hi3ec"
+#define BLYNK_TEMPLATE_ID ""
 #define BLYNK_TEMPLATE_NAME "Smart Aquarium"
-#define BLYNK_AUTH_TOKEN "QmtbID-9NDC9aHgZ4GzohdG-B1q_vk8Q"
+#define BLYNK_AUTH_TOKEN ""
 
 #include <WiFi.h>
 #include <BlynkSimpleEsp32.h>
@@ -10,12 +10,12 @@
 #include <HTTPClient.h>
 #include <time.h>
 
-char ssid[] = "Brikena's Network";
-char pass[] = "123412345";
+char ssid[] = "";
+char pass[] = "";
 
 // InfluxDB
-String influxUrl = "https://eu-central-1-1.aws.cloud2.influxdata.com/api/v2/write?org=Aquarium&bucket=aquarium&precision=s";
-String influxToken = "yJZ-GtJCnbRwN_BU6Jn2chTYOh_Z3s05OHg0Cvcgm3aXM5vuKM9OBcMthLWpGsOySmeQ-OCvjt9K2c4LZn-R2w==";
+String influxUrl = "";
+String influxToken = "";
 
 // ===== TEMPERATURE =====
 bool highAlertSent = false;
