@@ -14,7 +14,7 @@
 
 ## 🎬 Demo
 
-[![AquaGuard Demo Video]](https://www.youtube.com/watch?v=dEEe8Ku3BBs)
+[![AquaGuard Demo Video]](https://www.youtube.com/watch?v=FnfrhithF7Q)
 
 > Click the link
 
@@ -218,10 +218,10 @@ sudo systemctl start aquaguard
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.jpg)
 
 ### Mobile App
-![Mobile](screenshots/mobile.png)
+![Mobile](screenshots/blynk.png)
 
 ### Landing Page
 ![Landing](screenshots/landing.png)
