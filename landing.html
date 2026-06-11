@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="/static/manifest.json">
+<meta name="theme-color" content="#00d4aa">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AquaGuard">
+<link rel="apple-touch-icon" href="/static/icon-192.png">
+    <title>AquaGuard — Smart Aquarium Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #070b14; color: #e2e8f0; min-height: 100vh; }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+            background: radial-gradient(ellipse at top, #0d2137 0%, #070b14 70%);
+        }
+
+        .logo-badge {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00d4aa, #0088ff);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 24px;
+            box-shadow: 0 0 40px rgba(0,212,170,0.3);
+        }
+
+        .title {
+            font-size: 52px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00d4aa, #0088ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            margin-bottom: 48px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,212,170,0.1);
+            border: 1px solid rgba(0,212,170,0.3);
+            padding: 8px 20px;
+            border-radius: 99px;
+            font-size: 14px;
+            color: #00d4aa;
+            font-weight: 500;
+            margin-bottom: 48px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #00d4aa;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0,212,170,0.4); }
+            70% { box-shadow: 0 0 0 8px rgba(0,212,170,0); }
+            100% { box-shadow: 0 0 0 0 rgba(0,212,170,0); }
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d4aa, #0088ff);
+            color: white;
+            padding: 18px 48px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 60px;
+            transition: opacity 0.2s;
+            box-shadow: 0 0 30px rgba(0,212,170,0.2);
+        }
+
+        .cta-btn:hover { opacity: 0.85; }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .feature {
+            background: #0d1b2e;
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: left;
+        }
+
+        .feature-icon { font-size: 28px; margin-bottom: 12px; }
+        .feature-title { font-size: 15px; font-weight: 600; color: #e2e8f0; margin-bottom: 8px; }
+        .feature-desc { font-size: 13px; color: #64748b; line-height: 1.6; }
+
+        .tech-stack {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .tech-badge {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 6px 16px;
+            border-radius: 99px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 700px;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #00d4aa;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer {
+            font-size: 13px;
+            color: #334155;
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer span { color: #00d4aa; }
+
+        @media (max-width: 768px) {
+            .title { font-size: 36px; }
+            .subtitle { font-size: 16px; }
+            .features { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+<div class="hero">
+    <div class="logo-badge">🐟</div>
+    <h1 class="title">AquaGuard</h1>
+    <p class="subtitle">AI-powered smart aquarium monitoring system combining computer vision, IoT sensors, and voice control for complete aquarium intelligence.</p>
+
+    <div class="live-badge">
+        <div class="live-dot"></div>
+        System Live — Monitoring Now
+    </div>
+
+    <a href="/dashboard" class="cta-btn">Open Live Dashboard</a>
+
+    <div class="stats-row">
+        <div class="stat">
+            <div class="stat-value" id="fish-count">--</div>
+            <div class="stat-label">Fish Detected</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="temp">--</div>
+            <div class="stat-label">Temperature</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" id="water">--</div>
+            <div class="stat-label">Water Level</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value" style="color:#22c55e">Good</div>
+            <div class="stat-label">Health Score</div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <div class="feature-icon">🤖</div>
+            <div class="feature-title">Computer Vision AI</div>
+            <div class="feature-desc">Custom YOLOv8 model trained on real aquarium footage detects and tracks each fish in real time.</div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">📡</div>
+            <div class="feature-title">IoT Sensor Fusion</div>
+            <div class="feature-desc">ESP32 monitors temperature and water level every 10 seconds, sending data to InfluxDB Cloud.</div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🧠</div>
+            <div class="feature-title">AI Chat Assistant</div>
+            <div class="feature-desc">Powered by Llama 3 — ask anything about your aquarium and get intelligent answers using live data.</div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🎤</div>
+            <div class="feature-title">Alexa Voice Control</div>
+            <div class="feature-desc">Ask Alexa about your fish, temperature, or trigger feeding — all using natural voice commands.</div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">📱</div>
+            <div class="feature-title">Mobile Alerts</div>
+            <div class="feature-desc">Instant Telegram and Blynk notifications when fish show unusual behavior or sensors exceed thresholds.</div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🍽️</div>
+            <div class="feature-title">Automatic Feeding</div>
+            <div class="feature-desc">Servo motor feeds fish automatically every morning at 7:30 AM or on demand from dashboard or voice.</div>
+        </div>
+    </div>
+
+    <div class="tech-stack">
+        <span class="tech-badge">Raspberry Pi 4</span>
+        <span class="tech-badge">ESP32</span>
+        <span class="tech-badge">YOLOv8</span>
+        <span class="tech-badge">ONNX Runtime</span>
+        <span class="tech-badge">Flask</span>
+        <span class="tech-badge">InfluxDB</span>
+        <span class="tech-badge">Grafana</span>
+        <span class="tech-badge">Blynk</span>
+        <span class="tech-badge">Llama 3</span>
+        <span class="tech-badge">Alexa Skills Kit</span>
+        <span class="tech-badge">Telegram API</span>
+        <span class="tech-badge">OpenCV</span>
+    </div>
+
+    <div class="footer">
+        AquaGuard — Smart Aquarium Intelligence · Built with <span>♥</span> · South East European University · 2026
+    </div>
+</div>
+
+<script>
+async function updateStats() {
+    try {
+        const stats = await fetch('/stats').then(r => r.json());
+        const sensors = await fetch('/sensors').then(r => r.json());
+        document.getElementById('fish-count').textContent = stats.fish_count;
+        document.getElementById('temp').textContent = sensors.temperature;
+        document.getElementById('water').textContent = sensors.water_level;
+    } catch(e) {}
+}
+updateStats();
+setInterval(updateStats, 5000);
+</script>
+</body>
+</html>
+
