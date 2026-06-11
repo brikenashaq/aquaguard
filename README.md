@@ -2,7 +2,7 @@
 
 > An AI-powered smart aquarium monitoring system combining computer vision, IoT sensors, voice control, and cloud analytics into a single unified platform.
 
-![AquaGuard Dashboard](screenshots/dashboard.png)
+![AquaGuard Dashboard](screenshots/dashboard.jpg)
 
 [![Python](https://img.shields.io/badge/Python-3.13-blue?style=flat-square&logo=python)](https://python.org)
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-ONNX-green?style=flat-square)](https://ultralytics.com)
